@@ -4,10 +4,10 @@ import { createWhatsAppUrl, defaultWhatsAppMessage } from "@/lib/whatsapp";
 
 export function Hero() {
   return (
-    <section id="inicio" className="relative overflow-hidden pt-24 lg:min-h-screen lg:pt-28">
-      <div className="absolute left-1/2 top-20 -z-10 hidden h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/16 blur-3xl sm:block" />
-      <div className="container-page grid gap-8 pb-10 md:pb-12 lg:min-h-[calc(100vh-7rem)] lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-12 lg:pb-16">
-        <AnimatedSection className="max-w-3xl">
+    <section id="inicio" className="relative h-auto min-h-0 overflow-hidden pt-24 lg:min-h-screen lg:pt-28">
+      <div className="pointer-events-none absolute left-1/2 top-20 -z-10 hidden h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/16 blur-3xl sm:block" />
+      <div className="hero-grid container-page grid gap-8 pb-10 md:pb-12 lg:min-h-[calc(100vh-7rem)] lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-12 lg:pb-16">
+        <AnimatedSection className="hero-copy max-w-3xl">
           <span className="eyebrow">
             <Sparkles size={15} />
             Diseño web en México
@@ -37,8 +37,8 @@ export function Hero() {
           </div>
         </AnimatedSection>
 
-        <div className="relative hidden md:block">
-          <div className="absolute -inset-5 rounded-[2rem] bg-gradient-to-br from-cyan-400/18 via-purple-400/12 to-emerald-400/12 blur-2xl" />
+        <div className="hero-mockup relative w-full">
+          <div className="pointer-events-none absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-cyan-400/12 via-purple-400/8 to-emerald-400/10 blur-2xl md:-inset-5 md:from-cyan-400/18 md:via-purple-400/12 md:to-emerald-400/12" />
           <div className="glass-panel relative overflow-hidden rounded-[1.8rem] p-4">
             <div className="flex items-center justify-between border-b border-white/10 pb-4">
               <div className="flex gap-2">
@@ -48,8 +48,8 @@ export function Hero() {
               </div>
               <span className="rounded-full bg-cyan-300/10 px-3 py-1 text-xs font-bold text-cyan-200">jtcodex.mx</span>
             </div>
-            <div className="grid gap-4 pt-5 sm:grid-cols-[1fr_0.72fr]">
-              <div className="rounded-2xl border border-cyan-300/18 bg-[#081827] p-5">
+            <div className="grid grid-cols-2 gap-3 pt-5 sm:grid-cols-[1fr_0.72fr] sm:gap-4">
+              <div className="col-span-2 rounded-2xl border border-cyan-300/18 bg-[#081827] p-5 sm:col-span-1">
                 <div className="mb-5 flex items-center gap-3">
                   <LayoutDashboard className="text-cyan-300" />
                   <div>
@@ -61,16 +61,16 @@ export function Hero() {
                   <div className="h-3 w-3/4 rounded-full bg-white/18" />
                   <div className="h-3 w-1/2 rounded-full bg-white/12" />
                   <div className="mt-5 grid grid-cols-3 gap-2">
-                    <span className="h-16 rounded-xl bg-cyan-300/14" />
-                    <span className="h-16 rounded-xl bg-emerald-300/14" />
-                    <span className="h-16 rounded-xl bg-purple-300/14" />
+                    <span className="h-12 rounded-xl bg-cyan-300/14 sm:h-16" />
+                    <span className="h-12 rounded-xl bg-emerald-300/14 sm:h-16" />
+                    <span className="h-12 rounded-xl bg-purple-300/14 sm:h-16" />
                   </div>
                 </div>
               </div>
-              <div className="space-y-4">
+              <div className="grid gap-3 sm:block sm:space-y-4">
                 <div className="rounded-2xl border border-emerald-300/18 bg-emerald-300/8 p-4">
                   <p className="text-xs font-bold uppercase text-emerald-200">Conversión</p>
-                  <p className="mt-2 text-2xl font-black">WhatsApp</p>
+                  <p className="mt-2 text-xl font-black sm:text-2xl">WhatsApp</p>
                   <div className="mt-4 h-2 rounded-full bg-emerald-300/70" />
                 </div>
                 <div className="rounded-2xl border border-purple-300/18 bg-purple-300/8 p-4">
