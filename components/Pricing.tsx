@@ -18,7 +18,7 @@ export function Pricing() {
     <AnimatedSection id="planes" className="section-pad">
       <div className="container-page">
         <span className="eyebrow">Planes</span>
-        <div className="mt-5 flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
+        <div className="mt-5 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <h2 className="section-title">Planes para llevar tu negocio a Internet</h2>
             <p className="section-copy mt-4">Elige la opción que mejor se adapte a tu negocio.</p>
@@ -35,7 +35,7 @@ export function Pricing() {
           ))}
         </div>
 
-        <div className="glass-panel mt-10 flex flex-col items-start justify-between gap-5 rounded-2xl p-6 md:flex-row md:items-center">
+        <div className="glass-panel mt-10 flex flex-col items-start gap-5 rounded-2xl p-6 md:flex-row md:items-center md:justify-between">
           <div>
             <h3 className="font-[var(--font-space)] text-2xl font-black">¿No sabes cuál elegir?</h3>
             <p className="mt-2 max-w-2xl text-slate-300">

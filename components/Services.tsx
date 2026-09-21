@@ -6,7 +6,7 @@ export function Services() {
     <AnimatedSection id="servicios" className="section-pad">
       <div className="container-page">
         <span className="eyebrow">Servicios</span>
-        <div className="mt-5 flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
+        <div className="mt-5 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <h2 className="section-title">Todo lo que tu negocio necesita para estar en Internet</h2>
           <p className="section-copy">Creamos soluciones digitales adaptadas a las necesidades de cada negocio.</p>
         </div>

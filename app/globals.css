@@ -88,7 +88,8 @@ a {
 }
 
 .section-pad {
-  padding-block: clamp(4rem, 8vw, 7rem);
+  min-height: 0;
+  padding-block: clamp(3.25rem, 11vw, 4.5rem);
 }
 
 .section-title {
@@ -210,5 +211,20 @@ a {
 
   body::after {
     opacity: 0.45;
+  }
+
+  body::before,
+  body::after {
+    position: absolute;
+  }
+
+  main > section {
+    min-height: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-pad {
+    padding-block: clamp(4rem, 8vw, 7rem);
   }
 }

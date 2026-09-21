@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion, type HTMLMotionProps } from "framer-motion";
+import { useEffect, useState } from "react";
 
 type AnimatedSectionProps = HTMLMotionProps<"section"> & {
   delay?: number;
@@ -8,13 +9,25 @@ type AnimatedSectionProps = HTMLMotionProps<"section"> & {
 
 export function AnimatedSection({ children, delay = 0, ...props }: AnimatedSectionProps) {
   const reduceMotion = useReducedMotion();
+  const [animateOnScroll, setAnimateOnScroll] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia("(min-width: 768px)");
+    const update = () => setAnimateOnScroll(media.matches);
+
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
+
+  const shouldAnimate = animateOnScroll && !reduceMotion;
 
   return (
     <motion.section
-      initial={reduceMotion ? false : { opacity: 0, y: 26 }}
-      whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.55, ease: "easeOut", delay }}
+      initial={shouldAnimate ? { opacity: 0, y: 20 } : false}
+      whileInView={shouldAnimate ? { opacity: 1, y: 0 } : undefined}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.45, ease: "easeOut", delay }}
       {...props}
     >
       {children}
