@@ -71,7 +71,7 @@ export function Header() {
 
       <div
         id="mobile-menu"
-        className={`lg:hidden ${isOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"} transition-opacity`}
+        className={`absolute inset-x-0 top-full lg:hidden ${isOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"} transition-opacity`}
       >
         <div className="container-page pb-6">
           <nav className="glass-panel grid gap-2 rounded-2xl p-3" aria-label="Navegación móvil">
