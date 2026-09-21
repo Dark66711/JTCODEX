@@ -5,7 +5,7 @@ import { createWhatsAppUrl, defaultWhatsAppMessage } from "@/lib/whatsapp";
 export function Hero() {
   return (
     <section id="inicio" className="relative min-h-screen overflow-hidden pt-28">
-      <div className="absolute left-1/2 top-20 -z-10 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/16 blur-3xl" />
+      <div className="absolute left-1/2 top-20 -z-10 hidden h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/16 blur-3xl sm:block" />
       <div className="container-page grid min-h-[calc(100vh-7rem)] items-center gap-12 pb-16 lg:grid-cols-[1.02fr_0.98fr]">
         <AnimatedSection className="max-w-3xl">
           <span className="eyebrow">

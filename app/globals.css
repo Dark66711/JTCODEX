@@ -143,6 +143,10 @@ a {
   transform: translateY(-2px);
 }
 
+.header-desktop-cta {
+  white-space: nowrap;
+}
+
 .focus-ring:focus-visible {
   outline: 3px solid rgba(0, 183, 255, 0.7);
   outline-offset: 3px;
@@ -188,5 +192,23 @@ a {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .header-desktop-cta {
+    display: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    background:
+      radial-gradient(circle at 50% 0%, rgba(0, 183, 255, 0.08), transparent 18rem),
+      linear-gradient(180deg, #06111b 0%, #07131f 48%, #040b12 100%);
+  }
+
+  body::after {
+    opacity: 0.45;
   }
 }

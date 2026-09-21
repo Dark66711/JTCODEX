@@ -26,7 +26,7 @@ export function Header() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled || isOpen ? "border-b border-white/10 bg-[#06111B]/88 shadow-2xl shadow-black/20 backdrop-blur-xl" : "bg-transparent"
+        scrolled || isOpen ? "border-b border-white/10 bg-[#06111B]/94 shadow-xl shadow-black/20 backdrop-blur-md" : "bg-transparent"
       }`}
     >
       <div className="container-page flex h-20 items-center justify-between">
@@ -51,7 +51,7 @@ export function Header() {
           href={createWhatsAppUrl(defaultWhatsAppMessage)}
           target="_blank"
           rel="noreferrer"
-          className="btn-primary focus-ring hidden lg:inline-flex"
+          className="header-desktop-cta btn-primary focus-ring hidden lg:inline-flex"
         >
           <MessageCircle size={18} />
           Cotizar proyecto
