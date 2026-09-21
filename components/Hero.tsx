@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section id="inicio" className="relative overflow-hidden pt-24 lg:min-h-screen lg:pt-28">
       <div className="absolute left-1/2 top-20 -z-10 hidden h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/16 blur-3xl sm:block" />
-      <div className="container-page grid gap-8 pb-12 lg:min-h-[calc(100vh-7rem)] lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-12 lg:pb-16">
+      <div className="container-page grid gap-8 pb-10 md:pb-12 lg:min-h-[calc(100vh-7rem)] lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-12 lg:pb-16">
         <AnimatedSection className="max-w-3xl">
           <span className="eyebrow">
             <Sparkles size={15} />
@@ -37,7 +37,7 @@ export function Hero() {
           </div>
         </AnimatedSection>
 
-        <div className="relative">
+        <div className="relative hidden md:block">
           <div className="absolute -inset-5 rounded-[2rem] bg-gradient-to-br from-cyan-400/18 via-purple-400/12 to-emerald-400/12 blur-2xl" />
           <div className="glass-panel relative overflow-hidden rounded-[1.8rem] p-4">
             <div className="flex items-center justify-between border-b border-white/10 pb-4">
